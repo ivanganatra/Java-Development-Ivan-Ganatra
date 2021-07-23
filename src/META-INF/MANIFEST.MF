@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: com.company.Main
+Main-Class: com.company.Main_Class
 Class-Path: D:\C++vstudio\HotwaxSystemsIntern\JavaDevelopment\out\produc
  tion\Java Development\com\company
 
