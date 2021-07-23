@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main_Class {
     static List<String> shapes_name=new ArrayList<>();
     public static final double pi=3.14;
-    static void addshapes_name()
+    Main_Class()
     {
         shapes_name= Arrays.asList("Circle", "Rectangle", "Triangle", "Square", "Sphere", "Cylinder",
                 "Cuboid", "Cube");
@@ -115,8 +115,6 @@ public class Main_Class {
     }
     public static void main(String []args)
     {
-
-         addshapes_name();     //Add all the required shapes_name in the function block
 //       viewAllShapesName(); //Comment out to view all shapes_name with their id.0
 
         int shape_id;
