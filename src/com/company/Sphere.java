@@ -1,29 +1,32 @@
 package com.company;
-
 import java.util.Scanner;
-class Sphere {
+class Sphere implements Shape {
     double radius;
     double surfaceArea;
     double volume;
-    void askInputs()
-    {
+    public boolean askInputs(){
+
         System.out.print("Enter radius: ");
         Scanner sc=new Scanner(System.in);
         radius=sc.nextDouble();
 
+        //return false if there is a error in the input
+        if(radius==0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
-    void printAreaPerimeterVolume()
-    {
-        System.out.println("SurfaceArea of the Sphere with radius "+radius+" is :"+calcSurfaceArea());
-        System.out.println("Volume of the Sphere with radius "+radius+" is :"+calcVolume());
-    }
-    double calcSurfaceArea()
-    {
+    public double calcSurfaceArea(){
+
         surfaceArea= 4*Main_Class.pi*radius*radius;
         return surfaceArea;
     }
-    double calcVolume()
-    {
+    public double calcVolume(){
+
         volume=((double)4/3)*Main_Class.pi*radius*radius*radius;
         return volume;
     }

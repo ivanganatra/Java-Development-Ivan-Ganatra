@@ -4,120 +4,188 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
 public class Main_Class {
-    static List<String> shapes=new ArrayList<>();
+    static List<String> shapes_name=new ArrayList<>();
     public static final double pi=3.14;
-    static void addShapes()
+    static void addshapes_name()
     {
-        shapes= Arrays.asList("Circle", "Rectangle", "Triangle", "Square", "Sphere", "Cylinder",
+        shapes_name= Arrays.asList("Circle", "Rectangle", "Triangle", "Square", "Sphere", "Cylinder",
                 "Cuboid", "Cube");
     }
-    static void viewAllShapes()
+    static void viewAllShapesName()
     {
         int id=0;
-        for(String s:shapes)
+        for(String s:shapes_name)
         {
             System.out.print("Id: "+id +") "+s+"\n");
             id+=1; // Move to next id
         }
         System.out.println("\n");
     }
-    static void moveToClassOfTheShape(int shape_id)
+    static void printAreaPerimeterVolume(Shape shape,String shape_name, boolean is2D) {
+
+        //Error to be caught-Calling (surfaceAre,Volume) for 2D and (Area,Perimeter) for 3D figures
+        try {
+            if (is2D == false) {
+                System.out.println("SurfaceArea of the " + shape_name + " is :" + shape.calcSurfaceArea());
+                System.out.println("Volume of the " + shape_name + " is :" + shape.calcVolume());
+            } else {
+                System.out.println("Area of the " + shape_name + " is :" + shape.calcArea());
+                System.out.println("Perimeter of the " + shape_name + " is :" + shape.calcPerimeter());
+            }
+            System.out.println("");
+        }
+        catch(Exception e)
+        {
+            System.out.println("Incorrect function calls, function should be called according to the 2D and 3D figures.");
+        }
+    }
+    static boolean moveToClassOfTheShape(int shape_id)
     {
-        System.out.println("You selected "+ shapes.get(shape_id)+" as your shape.");
+        System.out.println("You selected "+ shapes_name.get(shape_id)+" as your shape.");
+        boolean is2D=false;
+        Shape shape=new Circle();
+        boolean isValidInput=true;
+
+        //Selecting the shape of Class as per the options selected by the user
         switch(shape_id)
         {
             case 0:
             {
-                Circle shape=new Circle();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Circle();
+                is2D=true;
                 break;
             }
             case 1:
             {
-                Rectangle shape=new Rectangle();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Rectangle();
+                is2D=true;
                 break;
             }
             case 2:
             {
-                Triangle shape=new Triangle();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Triangle();
+                is2D=true;
                 break;
             }
             case 3:
             {
-                Square shape=new Square();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Square();
+                is2D=true;
                 break;
             }
             case 4:
             {
-                Sphere shape=new Sphere();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Sphere();
+                is2D=false;
                 break;
             }
             case 5:
             {
-                Cylinder shape=new Cylinder();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Cylinder();
+                is2D=false;
                 break;
             }
             case 6:
             {
-                Cuboid shape=new Cuboid();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Cuboid();
+                is2D=false;
                 break;
             }
             case 7:
             {
-                Cube shape=new Cube();
-                shape.askInputs();
-                shape.printAreaPerimeterVolume();
+                shape=new Cube();
+                is2D=false;
                 break;
             }
             default:
             {
-                System.out.println("Please enter valid input.");
+                isValidInput=false;
             }
         }
+        isValidInput|=shape.askInputs();
+        if(!isValidInput)
+        {
+            System.out.println("Please enter valid input.");
+            isValidInput=false;
+            return false;
+        }
+        printAreaPerimeterVolume(shape, shapes_name.get(shape_id), false);
+        return true;
     }
     public static void main(String []args)
     {
 
-         addShapes();     //Add all the required shapes in the function block
-//       viewAllShapes(); //Comment out to view all shapes with their id.
+         addshapes_name();     //Add all the required shapes_name in the function block
+//       viewAllShapesName(); //Comment out to view all shapes_name with their id.0
 
-        /*
-         * Here we ask user to select the shape.
-         * Then we take the input from the user.
-         * Shapes are divided into 2 parts: 1)2-D 2)3-D shapes.
-         */
+        int shape_id;
+        String isQuery;
+        do{
 
-         System.out.println("Select the shape to calculate area and perimeters for: ");
-         int id=0;
+            //Asking for query
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter 1 to ask a query: ");
+            isQuery=sc.next();
+            if(isQuery!="1") {
+                break;
+            }
 
-         //Asking for input
-         for(String s:shapes)
-        {
-            System.out.println("Enter "+id+": "+"for "+s+".");
-            id+=1; // Move to next id
+            //Asking for input
+            System.out.println("Select the shape to calculate (area,perimeters) or (surface area,volume) : ");
+            int id=0;
+            for(String s:shapes_name)
+            {
+                System.out.println("Enter "+id+": "+"for "+s+".");
+                id+=1; // Move to next id
+            }
+
+            //Taking the input
+            System.out.print("\n:");
+            shape_id=sc.nextInt();
         }
-        //Taking the input
-        System.out.print("\n:");
-        Scanner sc=new Scanner(System.in);
-        int shape_id=sc.nextInt();
-
-        //Taking input and printing output for the shape
-        moveToClassOfTheShape(shape_id);
-
+        while(moveToClassOfTheShape(shape_id));  //Printing output for the shape
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

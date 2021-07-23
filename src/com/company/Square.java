@@ -1,30 +1,33 @@
 package com.company;
 
 import java.util.Scanner;
-class Square {
+class Square implements Shape {
     double side;
     double area;
     double perimeter;
-    void askInputs()
-    {
+    public boolean askInputs() {
 
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter side: ");
         side=sc.nextDouble();
 
+        //return false if there is a error in the input
+        if(side==0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
-    void printAreaPerimeterVolume()
-    {
-        System.out.println("Area of the Square with side= "+ side+"is :"+ calcArea());
-        System.out.println("Perimeter of the Square with side= "+ side+"is :"+ calcPerimeter());
-    }
-    double calcArea()
-    {
+    public double calcArea() {
+
         area= side*side;
         return area;
     }
-    double calcPerimeter()
-    {
+    public double calcPerimeter() {
+
         perimeter=4*side;
         return perimeter;
     }

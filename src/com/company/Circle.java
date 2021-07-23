@@ -1,28 +1,31 @@
 package com.company;
-
 import java.util.Scanner;
-class Circle {
+class Circle implements Shape{
     double radius;
     double area;
     double perimeter;
-    void askInputs()
-    {
+    public boolean askInputs(){
+
         System.out.print("Enter radius: ");
         Scanner sc=new Scanner(System.in);
         radius=sc.nextDouble();
 
+        //return false if there is a error in the input
+        if(radius==0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
-    void printAreaPerimeterVolume()
-    {
-        System.out.println("Area of the Circle with radius "+radius+" is :"+calcArea());
-        System.out.println("Perimeter of the Circle with radius "+radius+" is :"+calcPerimeter());
-    }
-    double calcArea()
-    {
+    public double calcArea(){
+
         area= Main_Class.pi*radius*radius;
         return area;
     }
-    double calcPerimeter()
+    public double calcPerimeter()
     {
         perimeter=2*Main_Class.pi*radius;
         return perimeter;

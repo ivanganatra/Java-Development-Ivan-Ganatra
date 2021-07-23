@@ -1,13 +1,12 @@
 package com.company;
 
 import java.util.Scanner;
-class Rectangle {
+class Rectangle implements Shape {
     double length;
     double breadth;
-    double surface_area;
-    double volume;
-    void askInputs()
-    {
+    double area;
+    double perimeter;
+    public boolean askInputs() {
 
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter length: ");
@@ -15,22 +14,24 @@ class Rectangle {
         System.out.print("Enter breadth: ");
         breadth=sc.nextDouble();
 
+        //return false if there is a error in the input
+        if(length==0 || breadth==0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
-    void printAreaPerimeterVolume()
-    {
-        System.out.println("Area of the Rectangle with length= "+length+" and breadth= "+
-                           breadth+" "+"is :"+calcSurfaceArea());
-        System.out.println("Perimeter of the Rectangle with length= "+length+" and breadth= "+
-                           breadth+" "+"is :"+calcVolume());
+    public double calcArea() {
+
+        area= length*breadth;
+        return area;
     }
-    double calcSurfaceArea()
-    {
-        surface_area= length*breadth;
-        return surface_area;
-    }
-    double calcVolume()
-    {
-        volume=2*(length+breadth);
-        return volume;
+    public double calcPerimeter() {
+
+        perimeter=2*(length+breadth);
+        return perimeter;
     }
 }
