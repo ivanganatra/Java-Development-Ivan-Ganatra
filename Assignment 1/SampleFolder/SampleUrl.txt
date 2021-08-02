@@ -1,3 +1,0 @@
-../../../SampleFolder/SampleFile1.txt
-../../../SampleFolder/SampleFile2.txt
-../../../SampleFolder/SampleFile3.txt
