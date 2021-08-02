@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: com.company.SerializationTest_Class
-Class-Path: D:\C++vstudio\HotwaxSystemsIntern\JavaDevelopment\Assignment 5\Classes
