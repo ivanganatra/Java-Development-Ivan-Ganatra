@@ -1,9 +1,0 @@
-Problem Statement - 4
-
-Write a multi threaded program that simulates bank withdrawal process by two individuals. The program should first demonstrate that the account will run overdraw if thread safety is not taken into account and then the thread safe version should demonstrate the measures taken that help protect the account balance integrity.
-
-Create a class Account with properties name and balance. Initialize balance with 1000 indicating the current balance in the account. Also create a method named “withdraw” that deducts passed withdrawal amount from the account balance.
-Create another class AccountOverdrawDemo with main method and demonstrate that if two threads (indicating two joint account holders with separate ATM cards) actress the Account class at the same time and try to make withdrawal (call withdraw method) at the same time, account will overdraw at one point if both account holders keep withdrawing at the same time.
-Create another class AccountOverdrawSafeDemo that fixes this problem. You need to clearly demonstrate that both threads are accessing the same account at the same time and thread safety measures keep the account from overdrawing.
-Use System.out.println statements to your effect for demonstrating various information about Threads and showing the action that is being performed.
-
