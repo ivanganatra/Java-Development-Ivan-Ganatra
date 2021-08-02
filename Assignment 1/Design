@@ -1,72 +1,12 @@
-Step one-
-Ask user to select from 7 shapes
-0 Circle
-1 Rectangle
-2 Triangle
-3 Square
-4 Sphere
-5 Cylinder
-6 Cuboid
-7 Cube
-SAMPLE INPUT OUTPUT
-[
-    (Assume Circle Selected)
-    Enter radius : 2
-    Area of the Circle with radius 34 is :
-    Circumference of the Circle with radius 34 is :
+File 1-Containing all url's
+File 2-Containing all word's
 
-    (Assume Square Selected)
-    Enter side : 3
-    Area of the Square with side 3 is : <value>
-    Perimeter of the Square with side 3 is : <value>
-]
-On 1 selection
-1 Ask radius
-area=pi*r*r
-perimeter=2*pi*r
-error on radius zero
+All paths must be relative
 
-On 2 Selection
-1 ask length, breadth
-area=l*b
-perimeter=2*(l+b)
-error on length or breadth zero
+For each URL:
+    Print top 3 words in the File 2
+    List word by sorted number of occurences-Decreasing order
 
-On 3 Selection
-1 ask base,height for area
-ask length of three sides for perimeter
-area=(b*h)/2
-perimeter= l1+l2+l3
-error on base, height=0
-error on l1+l2<=l3 or l2+l3<=l1 or l1+l2<=l2
-
-On 4 Selection
-1 ask length of side
-area=l*l
-perimeter=4*l
-error on l=0
-
-On 5 Selection
-1 ask radius
-area=(4/3)*pi*r*r*r
-Surface area=4*pi*r*r
-error on r=0
-
-On 6 selection
-1 ask base radius, height
-area=pi*r*r*h
-surface area=2*pir*r*h +2*pi*r*R
-
-On 7 selection
-1 ask side length
-volume=a*a*a
-surface area=6*a*a
-
-On 8 selection
-1 ask l,b,h
-volume=l*b*h
-surface area=2*(l*b+b*h+l*h)
-
-
-
-
+For each word:
+    Print total number of occurences
+    List words sorted by total number in descending order

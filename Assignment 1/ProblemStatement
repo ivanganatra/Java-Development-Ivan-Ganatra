@@ -1,32 +1,35 @@
-Problem Statement - 2
-Write a program that accepts user inputs as follows and perform certain operations and displays the results on the console. The program must keep running and must not exit.
+Problem Statement - 1
 
-The program is supposed to ask the shape (Circle, Reactange, etc) and calculate the area, perimeter and volume (if the shape selected is 3-D) and display the result. The program should make a pre-configured menu and display on the console on start up to present the various shape choices to the users
-Depending on the shape entered by the user, the program must ask additional questions/input parameters from the user. For example, if Circle is entered, it must ask for the radius (r). If Triangle is entered, the program must ask for base (b) and height (h).
-Again, use appropriate terminology for the shape in question. Distinguish between when to calculate what - Area, Circumference, Volume, Perimeter.
-Once all information is entered, display the result to the user on the console.
+Write a program to count words in web page content.
 
-Notes
-Follow appropriate OOPs design principles to design this program.
-Proper exception handling should be done. For example, one can refer to the following page : https://convincedcoder.com/2018/12/22/Exception-handling-best-practices-Java/
-Dedicated Exception classes must be created and thrown.
-
+Inputs:
+List of URLs (select your own URLs for testing) provided in a text file, e.g. urls.txt
+List of words (select your own words for testing) provided in a text file, e.g. words.txt
+Place the files above in such a way that the reviewer can himself get your code and just run without having to alter the source code to adjust the path. In other words, don’t use a hardcoded path particular to your machine, instead derive the path.
+Outputs:
+ For each URL, print:
+the top 3 words on the given list
+the number of occurrences of each word
+List the words sorted by the number of occurrences in descending order.
+For each word on the given list, print the total number of occurrences across all the specified URLs. List the words sorted by the total number in descending order.
 Example
-Select the shape to calculate area and perimeters for :
-Circle
-Rectangle
-Triangle
-Square
-Sphere
-Cylinder
-Etc
+Output #1
+========
+https://www.test1.com
+cat - 12
+dog - 9
+bear - 7
+https://www.test2.com
+lion - 14
+tiger - 8
+bear - 3
+==============================
+Output #2
+========
+lion - 14
+cat - 12
+bear - 10
+dog - 9
+tiger – 8
 
-(Assume Circle Selected)
-Enter radius : 2
-Area of the Circle with radius 34 is :
-Circumference of the Circle with radius 34 is :
 
-(Assume Square Selected)
-Enter side : 3
-Area of the Square with side 3 is : <value>
-Perimeter of the Square with side 3 is : <value>

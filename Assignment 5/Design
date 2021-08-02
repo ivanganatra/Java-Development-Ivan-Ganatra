@@ -1,0 +1,32 @@
+Serialization and Deserialization of Student class
+
+Student class:
+    constructors
+    FirstName
+    DateOfBirth
+    Address- (represents instance of Address Class)
+
+Address class:
+    constructors
+    City
+    State
+    PinCode
+    country
+
+SerializationTest class:
+    List of 4 Student Object
+    Serialize result to a file- Specified in command line
+    Run program twice with 2 file specified(output1.ser and output2.ser)
+
+DeserializationTest:
+    Reads serailzed list of students
+    Prints the list of Students
+    Files to be read will be specified in command line
+
+    Change dob from String to Date,
+    Change constructor implementation accordingly.
+    Not change signature of constructor(Name access modifier and paramaters
+    same)
+    Create separate single constructor to assign the passed String Date to
+    "dateOfBirth".
+

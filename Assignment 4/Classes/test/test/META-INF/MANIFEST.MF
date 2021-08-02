@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.company.Main_Class5
+Class-Path: D:\C++vstudio\HotwaxSystemsIntern\JavaDevelopment\Assignment 4\Classes
+

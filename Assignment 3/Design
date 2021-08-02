@@ -1,0 +1,31 @@
+Step one-
+Create Employee class:
+Name
+Email Address
+Age
+Date Of Birth
+
+(Start with a large amount of comma separated data stored in a text file)
+(The data should visible in a form of a table)
+(The first line of the file will always be a heading)
+Operations:
+    Add:
+        Name
+        Email Address
+        Age
+        Date Of Birth
+
+        Pressing enter should create a record in the file and file should be updated.
+
+    Delete:
+        Ask for employee id
+        Delete id from txt if it exist
+        Else tell the user, id doesn't exist
+
+    Search:
+        Query(text to search)
+        Sort(Order By)
+        Direction(ascending or descending)
+
+        Pressing enter should search based on the criteria and display the result on the console.
+
