@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+
 class Triangle implements Shape {
     double height;
     double base;

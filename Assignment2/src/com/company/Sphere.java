@@ -1,9 +1,10 @@
 package com.company;
 import java.util.Scanner;
-class Circle implements Shape{
+
+class Sphere implements Shape {
     double radius;
-    double area;
-    double perimeter;
+    double surfaceArea;
+    double volume;
     public boolean askInputs(){
 
         System.out.print("Enter radius: ");
@@ -20,14 +21,14 @@ class Circle implements Shape{
             return true;
         }
     }
-    public double calcArea(){
+    public double calcSurfaceArea(){
 
-        area= Main_Class.pi*radius*radius;
-        return area;
+        surfaceArea= 4*Main_Class.pi*radius*radius;
+        return surfaceArea;
     }
-    public double calcPerimeter()
-    {
-        perimeter=2*Main_Class.pi*radius;
-        return perimeter;
+    public double calcVolume(){
+
+        volume=((double)4/3)*Main_Class.pi*radius*radius*radius;
+        return volume;
     }
 }

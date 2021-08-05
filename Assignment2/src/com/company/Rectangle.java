@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+
 class Rectangle implements Shape {
     double length;
     double breadth;

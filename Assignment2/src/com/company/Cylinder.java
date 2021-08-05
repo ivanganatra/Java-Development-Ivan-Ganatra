@@ -1,20 +1,24 @@
 package com.company;
 
 import java.util.Scanner;
-class Cube implements Shape{
 
-    double side;
+class Cylinder implements Shape{
+
+    double height;
+    double radius;
     double surfaceArea;
     double volume;
 
     public boolean askInputs() {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter side: ");
-        side = sc.nextDouble();
+        System.out.print("Enter base: ");
+        radius = sc.nextDouble();
+        System.out.print("Enter height: ");
+        height = sc.nextDouble();
 
         //return false if there is a error in the input
-        if(side==0)
+        if(radius==0 || height==0)
         {
             return false;
         }
@@ -23,15 +27,16 @@ class Cube implements Shape{
             return true;
         }
     }
+
     public double calcSurfaceArea() {
 
-        surfaceArea = 6*side*side;
+        surfaceArea = 2 * Main_Class.pi * radius * height +2*Main_Class.pi*radius;
         return surfaceArea;
     }
 
     public double calcVolume() {
 
-        volume = side*side*side;
+        volume = Main_Class.pi * radius * radius * height;
         return volume;
     }
 }

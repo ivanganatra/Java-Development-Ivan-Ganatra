@@ -4,14 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
 public class Main_Class {
     static List<String> shapes_name=new ArrayList<>();
     public static final double pi=3.14;
-    Main_Class()
-    {
-        shapes_name= Arrays.asList("Circle", "Rectangle", "Triangle", "Square", "Sphere", "Cylinder",
-                "Cuboid", "Cube");
-    }
     static void viewAllShapesName()
     {
         int id=0;
@@ -115,8 +111,9 @@ public class Main_Class {
     }
     public static void main(String []args)
     {
-//       viewAllShapesName(); //Comment out to view all shapes_name with their id.0
-
+        shapes_name= Arrays.asList("Circle", "Rectangle", "Triangle", "Square", "Sphere", "Cylinder",
+                "Cuboid", "Cube");
+        //viewAllShapesName(); //Comment out to view all shapes_name with their id.0
         int shape_id;
         String isQuery;
         do{
@@ -125,7 +122,7 @@ public class Main_Class {
             Scanner sc=new Scanner(System.in);
             System.out.print("Enter 1 to ask a query: ");
             isQuery=sc.next();
-            if(isQuery!="1") {
+            if(!isQuery.equals("1")) {
                 break;
             }
 

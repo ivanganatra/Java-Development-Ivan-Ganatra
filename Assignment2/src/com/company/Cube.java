@@ -1,15 +1,18 @@
 package com.company;
 
 import java.util.Scanner;
-class Square implements Shape {
+
+class Cube implements Shape{
+
     double side;
-    double area;
-    double perimeter;
+    double surfaceArea;
+    double volume;
+
     public boolean askInputs() {
 
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter side: ");
-        side=sc.nextDouble();
+        side = sc.nextDouble();
 
         //return false if there is a error in the input
         if(side==0)
@@ -21,14 +24,15 @@ class Square implements Shape {
             return true;
         }
     }
-    public double calcArea() {
+    public double calcSurfaceArea() {
 
-        area= side*side;
-        return area;
+        surfaceArea = 6*side*side;
+        return surfaceArea;
     }
-    public double calcPerimeter() {
 
-        perimeter=4*side;
-        return perimeter;
+    public double calcVolume() {
+
+        volume = side*side*side;
+        return volume;
     }
 }
