@@ -19,7 +19,7 @@ SerializationTest class:
     Run program twice with 2 file specified(output1.ser and output2.ser)
 
 DeserializationTest:
-    Reads serailzed list of students
+    Reads serialized list of students
     Prints the list of Students
     Files to be read will be specified in command line
 
