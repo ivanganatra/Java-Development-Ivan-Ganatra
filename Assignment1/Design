@@ -1,0 +1,12 @@
+File 1-Containing all url's
+File 2-Containing all word's
+
+All paths must be relative
+
+For each URL:
+    Print top 3 words in the File 2
+    List word by sorted number of occurences-Decreasing order
+
+For each word:
+    Print total number of occurences
+    List words sorted by total number in descending order
