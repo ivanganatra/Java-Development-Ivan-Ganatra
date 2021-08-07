@@ -1,7 +1,9 @@
-package com.company;
+package com;
+
 import java.util.*;
+
 public class Main_Class {
-    static Map<Integer,employee> emp_list=new HashMap<>();
+    static Map<Integer, employee> emp_list=new HashMap<>();
 
     //Takes valid integer input in the [min,max] range
     private  static int takeIntegerInput(int min,int max)
@@ -9,6 +11,7 @@ public class Main_Class {
         Scanner sc;
         int input=0;
         boolean is_input_correct=false;
+
         //Try catch to ask for input until user gives correct input
         while(!is_input_correct) {
             try {
@@ -28,6 +31,8 @@ public class Main_Class {
         }
         return input;
     }
+
+    /**Adds the employees to the emp_list*/
     private static void addEmployee()
     {
         //Creating new employee
@@ -54,6 +59,8 @@ public class Main_Class {
         System.out.println("We have stored the information of "+new_emp.getName()+
                 " having id = " +new_emp.getId()+".\n");
     }
+
+    /**Asks and deletes the employee from emp_list with the emp_id as the input */
     private static void deleteEmployee()
     {
         int id=takeIntegerInput(0,Integer.MAX_VALUE);
@@ -69,6 +76,8 @@ public class Main_Class {
             System.out.println("This id doesn't exist.");
         }
     }
+
+    /**Prints details of employee with the asked id.*/
     private static void printEmployeeDetails(int id)
     {
         //Printing id details of the employee
@@ -156,12 +165,12 @@ public class Main_Class {
     }
     public static void main(String[] args)
     {
-        System.out.println("Welcome, please follow the " +
-                "instructions and enter valid inputs.");
+        System.out.println("Welcome, please follow the instructions and enter valid inputs.");
 
-        //Taking the input
         /**To Exit the main function when it becomes true*/
         boolean isExit;
+
+        //Taking the input
         do{
             isExit=false;
             System.out.println("You can perform the queries as follows.");

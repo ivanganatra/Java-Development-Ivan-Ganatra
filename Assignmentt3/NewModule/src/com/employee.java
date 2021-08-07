@@ -1,4 +1,4 @@
-package com.company;
+package com;
 
 public class employee implements Comparable<employee>{
     private String name;
@@ -8,6 +8,8 @@ public class employee implements Comparable<employee>{
     private int id;
     public static int selection;
     public static int order_by;
+
+    /**Ordering according to the input provided*/
     public int compareTo(employee e)
     {
         switch(selection)
@@ -35,6 +37,7 @@ public class employee implements Comparable<employee>{
         }
         return order_by*String.CASE_INSENSITIVE_ORDER.compare(dob,e.dob);
     }
+
     //All the Setter methods
     void addId(int id)
     {
