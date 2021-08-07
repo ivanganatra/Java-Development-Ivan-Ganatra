@@ -1,0 +1,25 @@
+Multi Threading
+Bank withdrawal by two individuals.
+Overdraw if thread safety is not taken into account
+Thread safe version to demonstrate the measures to protect the account
+integrity.
+
+Account Class:
+    Name
+
+    Balance=1000 (Current_Balance)
+
+    Withdraw (Deducts amount from balance)
+
+    AccountOverdrawDemo with main method and demonstrate
+    that if two threads (indicating two joint account holders
+    with separate ATM cards) access the Account class at the
+    same time and try to make withdrawal (call withdraw method)
+    at the same time, account will overdraw at one point if both
+    account holders keep withdrawing at the same time.
+
+    AccountOverdrawSafeDemo-You need to clearly demonstrate that
+    both threads are accessing the same account at the same time
+    and thread safety measures keep the account from overdrawing.
+
+System.out.println - Will demonstrate various information about Threads
