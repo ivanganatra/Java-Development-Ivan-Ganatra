@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class Main_Class1 {
+public class MainClass {
 
     /** Stores name of current file which is open for reading */
     static String file_name;
